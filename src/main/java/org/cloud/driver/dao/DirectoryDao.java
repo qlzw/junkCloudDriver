@@ -46,7 +46,7 @@ public interface DirectoryDao {
 
 
     //获取已删除的文件夹
-    @Select("SELECT * FROM `file` WHERE status = -1 and user_id = #{userId}")
+    @Select("SELECT * FROM `directory` WHERE status = -1 and user_id = #{userId}")
     List<Directory> getStatusDelete(@Param("userId") long userId);
 
 }
